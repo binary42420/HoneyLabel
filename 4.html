@@ -41,7 +41,7 @@
 
         }
     </style>
-    <script>
+<script>
   function printPDF(url) {
     var iframe = document.createElement('iframe');
     iframe.style.display = 'none';
@@ -51,8 +51,10 @@
     iframe.onload = function() {
       setTimeout(function() {
         iframe.contentWindow.print();
-                  document.body.removeChild(iframe);
-      }, 2000); // Delay printing for 1 second to ensure PDF is loaded
+        setTimeout(function() {
+          document.body.removeChild(iframe);
+        }, 1000); // Delay removing the iframe to ensure the print dialog is closed
+      }, 1000); // Delay printing for 1 second to ensure PDF is loaded
     };
   }
 </script>
