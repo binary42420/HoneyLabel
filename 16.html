@@ -44,6 +44,20 @@
   border-radius: 5px;
 }
     </style>
+
+     <script>      
+  function printPDF(url) {
+    var iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = url;
+    document.body.appendChild(iframe);
+
+    iframe.onload = function() {
+iframe.contentWindow.print();
+    };
+  }
+
+</script>
 </head>
 <body>
 
@@ -77,13 +91,13 @@
     <div class="w3-row-padding w3-padding-16 w3-center" id="food">
 <h3> Cinnamon </h3>
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf');wnd.print();"> 
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf')"> 
               <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.png" width="250" height="300"> </a>
             <h2>Front</h2>
             <p></p>
         </div>
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf');wnd.print();"> 
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf')"> 
               <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.png" width="250" height="300"> </a>
             <h2>Back</h2>
             <p></p>
@@ -96,14 +110,14 @@
     <div class="w3-row-padding w3-padding-16 w3-center" id="food">
       <h3> LWGT </h3>
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/LWGT/16.pdf');wnd.print();"> <img
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/LWGT/16.pdf')"> <img
                     src="https://binary42420.github.io/HoneyLabel/16/LWGT/16.png" width="250" height="300"> </a>
             <h2>Front</h2>
             <p></p>
         </div>
 
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/LWGT/16back.pdf');wnd.print();"> <img
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/LWGT/16back.pdf')"> <img
                     src="https://binary42420.github.io/HoneyLabel/16/LWGT/16back.png" width="250" height="300"> </a>
             <h2>Back</h2>
             <p></p>
@@ -115,14 +129,14 @@
 
 <h3>Orange </h3>
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/ORANGE/16.pdf');wnd.print();"> 
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16.pdf')"> 
               <img src="https://binary42420.github.io/HoneyLabel/16/ORANGE/16.png" width="250" height="300"> </a>
             <h2>Front</h2>
             <p></p>
         </div>
 
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.pdf');wnd.print();"> 
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.pdf')"> 
               <img src="https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.png" width="250" height="300"> </a>
             <h2>Back</h2>
             <p></p>
@@ -134,13 +148,13 @@
 
 <h3> Ginger</h3>
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/GINGER/16.pdf');wnd.print();"> <img
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16.pdf')"> <img
                     src="https://binary42420.github.io/HoneyLabel/16/GINGER/16.png" width="250" height="300"> </a>
             <h2>Front</h2>
             <p></p>
         </div>
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/GINGER/16back.pdf');wnd.print();"> <img
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16back.pdf')"> <img
                     src="https://binary42420.github.io/HoneyLabel/16/GINGER/16back.png" width="250" height="300"> </a>
             <h2>Back</h2>
             <p></p>
@@ -153,7 +167,7 @@
 <h3> Turmeric</h3>
 
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.pdf');wnd.print();"> <img
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.pdf')"> <img
                     src="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.png" width="250" height="300"> </a>
             <h2>Front</h2>
             <p></p>
@@ -161,7 +175,7 @@
         </div>
 
         <div class="w3-half">
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.pdf');wnd.print();"> <img
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.pdf')"> <img
                     src="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.png" width="250" height="300"> </a>
             <h2>Back</h2>
             <p></p>
@@ -177,7 +191,7 @@
 
         <div class="w3-half">
 
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16.pdf');wnd.print();"> <img
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16.pdf')"> <img
                     src="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16.png" width="250" height="300"> </a>
 
             <h2>Front</h2>
@@ -186,7 +200,7 @@
         </div>
         <div class="w3-half">
 
-            <a href="javascript: var wnd = window.open('https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16back.pdf');wnd.print();"> <img
+            <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16back.pdf')"> <img
                     src="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16back.png" width="250" height="300"> </a>
 
             <h2> Back</h2>
