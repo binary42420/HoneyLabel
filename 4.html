@@ -52,7 +52,9 @@
     setTimeout(function() {
       iframe.contentWindow.print();
     }, 1800);
-            document.body.removeChild(iframe);
+          setTimeout(function() {
+      document.body.removeChild(iframe);
+    }, 8000); 
 
   };
 }
