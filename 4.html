@@ -48,13 +48,10 @@
     iframe.src = url;
     document.body.appendChild(iframe);
 
-    iframe.onload = function() {
-      setTimeout(function() {
-        iframe.contentWindow.print();
-        setTimeout(function() {
-          document.body.removeChild(iframe);
-        }, 1000); // Delay removing the iframe to ensure the print dialog is closed
-      }, 1000); // Delay printing for 1 second to ensure PDF is loaded
+    iframe.onload = function() 
+    {setTimeout(function() 
+    { iframe.contentWindow.print(); setTimeout(function()  { document.body.removeChild(iframe);}, 2000); 
+      }, 10000);
     };
   }
 </script>
