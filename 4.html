@@ -56,9 +56,7 @@
     document.body.appendChild(iframe);
 
     iframe.onload = function() {
-      setTimeout(function() {
-        iframe.contentWindow.print();
-      }, 30000); 
+iframe.contentWindow.print();
     };
   }
 
