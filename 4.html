@@ -41,11 +41,15 @@
 
         }
     </style>
-    <script type="text/javascript">
-  function openWin()
-  {var wind = window.open('https://binary42420.github.io/HoneyLabel/4/BEEPOLLEN/pollen4.pdf');
-   wind.print();}
-    </script>
+    
+    <script> function printPDF(pdfURL) { var w = window.open(pdfURL); w.print(); } 
+        document.getElementById("printButton").addEventListener("click", function () { 
+            printPDF( "https://binary42420.github.io/HoneyLabel/4/BEEPOLLEN/pollen4.pdf" ); 
+                    }
+                                        
+                                                               ); 
+        </script>
+    
 </head>
 
 <body>
@@ -82,7 +86,7 @@
 
 
 
-<button onclick="openWin();"> Print </button>
+<button id="printButton" onclick="printPDF();"> Print </button>
                 
             </div>
             <div class="w3-third">
