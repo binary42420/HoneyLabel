@@ -44,6 +44,18 @@
   border-radius: 5px;
 }
     </style>
+
+       <script>      
+  function printPDF(url) {
+    var iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = url;
+    document.body.appendChild(iframe);
+
+    iframe.onload = function() {
+iframe.contentWindow.print();
+    };
+  }
 </head>
 <body>
 
