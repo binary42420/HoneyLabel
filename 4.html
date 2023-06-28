@@ -51,8 +51,9 @@
   iframe.onload = function() {
     setTimeout(function() {
       iframe.contentWindow.print();
-      document.body.removeChild(iframe);
     }, 1800);
+            document.body.removeChild(iframe);
+
   };
 }
 </script>
