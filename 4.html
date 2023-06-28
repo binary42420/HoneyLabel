@@ -41,23 +41,17 @@
 
         }
     </style>
+
+
 <script>
   function printPDF(url) {
-  var iframe = document.createElement('iframe');
-  iframe.style.display = 'none';
-  iframe.src = url;
-  document.body.appendChild(iframe);
-
-  iframe.onload = function() {
-    setTimeout(function() {
-      iframe.contentWindow.print();
-    }, 1800);
-          setTimeout(function() {
-      document.body.removeChild(iframe);
-    }, 45000); 
-
-  };
-}
+    var windowReference = window.open(url, '_blank');
+    windowReference.onload = function() {
+      setTimeout(function() {
+        windowReference.print();
+      }, 1000); // Delay printing for 1 second to ensure PDF is loaded
+    };
+  }
 </script>
 </head>
 
@@ -89,7 +83,7 @@
         <div class="w3-row-padding w3-padding-16 w3-center" id="food">
             <div class="w3-third">
 
-               <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/4/BEEPOLLEN/pollen4.pdf');">
+       <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/4/BEEPOLLEN/pollen4.pdf');">
   <img src="https://binary42420.github.io/HoneyLabel/4/BEEPOLLEN/4.png" width="250" height="250">
 </a>
 <h3>Bee Pollen</h3>
