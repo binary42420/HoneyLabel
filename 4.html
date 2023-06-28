@@ -65,7 +65,16 @@
         iframe.contentWindow.print();
       }, 2000); 
     };
+
+
+         var pdf = new PDFObject(url);
+        pdf.render();
+
+        setTimeout(function() {
+          pdf.print();
+        }, 2000); 
   }
+
 </script></head>
 
 <body>
