@@ -43,17 +43,18 @@
     </style>
 <script>
   function printPDF(url) {
-    var iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = url;
-    document.body.appendChild(iframe);
+  var iframe = document.createElement('iframe');
+  iframe.style.display = 'none';
+  iframe.src = url;
+  document.body.appendChild(iframe);
 
-    iframe.onload = function() 
-    {setTimeout(function() 
-    { iframe.contentWindow.print(); setTimeout(function()  { document.body.removeChild(iframe);}, 2000); 
-      }, 10000);
-    };
-  }
+  iframe.onload = function() {
+    setTimeout(function() {
+      iframe.contentWindow.print();
+      document.body.removeChild(iframe);
+    }, 1000);
+  };
+}
 </script>
 </head>
 
