@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 
+
+
+
+
+    
 <head>
     <title>Honey Labels</title>
     <meta charset="UTF-8">
@@ -16,60 +21,7 @@
   height: 34px;
 }
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
 
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
         
         body,
         h1,
@@ -103,15 +55,87 @@ input:checked + .slider:before {
 
 
         }
+
+        .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #E21C90;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+  background-color: #E21C90;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#secondary_content {
+  display: none;
+}
     </style>
     
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-  var checkbox = document.querySelector('input[type="checkbox"]');
+        let mainContent = document.querySelector('#main_content');
+let secondaryContent = document.querySelector('#secondary_content');
 
-  checkbox.addEventListener('change', function () {
-    if (checkbox.checked) {
-       
+document.querySelector('.switch input').addEventListener('change', e => { 
+  mainContent.style.display = e.target.checked ? 'block' : 'none';
+  secondaryContent.style.display = e.target.checked ? 'none' : 'block';
+});
+
+
+
+        
   function printPDF(url) {
     var iframe = document.createElement('iframe');
     iframe.style.display = 'none';
@@ -125,45 +149,23 @@ input:checked + .slider:before {
       }, 2000); // Delay printing for 1 second to ensure PDF is loaded
     };
   }
-      console.log('Checked');
-    } else {
-  function printPDF(url) {
-    var iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = url;
-    document.body.appendChild(iframe);
-
-    iframe.onload = function() {
-      setTimeout(function() {
-        iframe.contentWindow.print();
-      }, 1500); // Delay printing for 1 second to ensure PDF is loaded
-    };
-  }
-
-
-
-        
-      console.log('Not checked');
-    }
-  });
-});
 </script>
 
 
 </head>
 
 <body>
-    <div>
-    <h2>Toggle Switch</h2>
-    <h3> << iPhone  Desktop/android >>   </h3>
 
-<label class="switch">
-  <input type="checkbox" value="Checked">
-  <div class="slider"></div>
+
+
+  <label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
 </label>
-    </div>
 
-    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
+<div id="secondary_content">Slider 2</div>
+
+<div id="main_content"> <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
         <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button">Close Menu</a>
         <a href="https://binary42420.github.io/HoneyLabel/index.html" onclick="w3_close()" class="w3-bar-item w3-button">All Labels</a>
         <a href="https://binary42420.github.io/HoneyLabel/4.html" onclick="w3_close()" class="w3-bar-item w3-button">4 oz Labels</a>
@@ -302,7 +304,11 @@ input:checked + .slider:before {
                     function w3_close() {
                         document.getElementById("mySidebar").style.display = "none";
                     }
-                </script>
+                </script></div>
+<div id="secondary_content">Slider 2</div>
+
+
+   
 
 </body>
 
