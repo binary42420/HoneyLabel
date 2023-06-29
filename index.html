@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
     <style>
+	    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
         body,h1,h2,h4,h5,h6 {font-family: "Karma", sans-serif}
         .w3-bar-block .w3-bar-item {padding:20px}
 	     h3 {
@@ -20,29 +47,13 @@
     </style>
 </head>
 <body>
-
-    <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
-    style="display:none;z-index:2;width:40%;min-width:400px" id="mySidebar">
-   <a href="javascript:void(0)" onclick="w3_close()"
-      class="w3-bar-item w3-button">Close Menu</a>
-   <a href="https://binary42420.github.io/HoneyLabel/index.html" onclick="w3_close()" class="w3-bar-item w3-button">All Labels</a>
-   <a href="https://binary42420.github.io/HoneyLabel/4.html" onclick="w3_close()" class="w3-bar-item w3-button">4 oz Labels</a>
-
-   <a href="https://binary42420.github.io/HoneyLabel/16.html" onclick="w3_close()" class="w3-bar-item w3-button">16 oz Labels</a>
-
-   <a href="https://binary42420.github.io/HoneyLabel/bread.html" onclick="w3_close()" class="w3-bar-item w3-button">Banana Bread Labels</a>
-
-</nav>
-
-
-<!-- Top menu -->
-<div class="w3-top">
-    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-        <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-        <div class="w3-right w3-padding-16">Mail</div>
-        <div class="w3-center w3-padding-16">All Labels</div>
-    </div>
-</div>
+	
+<ul>
+  <li><a class="active" href="https://binary42420.github.io/HoneyLabel/index.html">All Labels</a></li>
+  <li><a href="https://binary42420.github.io/HoneyLabel/4.html">4oz Circle</a></li>
+  <li><a href="https://binary42420.github.io/HoneyLabel/16.html">16oz Oval</a></li>
+  <li><a href="https://binary42420.github.io/HoneyLabel/bread.html">Banana Bread</a></li>
+</ul>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
