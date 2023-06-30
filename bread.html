@@ -21,7 +21,7 @@
       }
 
 
-h2, a.button {
+h2{
         font-family: "Helvetica Neue", "Arial", sans-serif;
         font-weight: 600;
         font-variant-ligatures: normal;
@@ -29,6 +29,7 @@ h2, a.button {
         letter-spacing: 1px;
         text-align: center;
         display: block;
+        margin: 0 auto;
       }
       a.button{
               font-family: "Helvetica Neue", "Arial", sans-serif;
@@ -83,11 +84,22 @@ width: 50%;
       }
 
       div.frame {
-margin: 10;
+margin: 0 auto;
 margin-bottom: 1em;
 width: 100%;
         
       }
+
+      #linkBox {
+    width: 200px;
+    height: 200px;
+}
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
 
       li a:hover:not(.active) {
         background-color: #111;
@@ -127,32 +139,36 @@ margin: 0 auto;
     </ul>
 
     <!-- !PAGE CONTENT! -->
-      <div class="frame">
+      <div class="frame" >
 
-    <div class="box">
-
-      <!-- First Photo Grid-->
-
-      <!-- <div class="w3-row-padding w3-center" id="food"> -->
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/banana/4x.pdf');">
+    <div class="box" id="linkBox">
+        
+      <a href="#" class="fill-div" onclick="printPDF('https://binary42420.github.io/HoneyLabel/banana/4x.pdf');">
             <img src="https://binary42420.github.io/HoneyLabel/bread.png"/>
           </a>
-          <h2>4x / Page</h2>
-          
-            <a href="https://binary42420.github.io/HoneyLabel/banana/4x.pdf" class="button">Backup DL Link</a>
-          
+          </div>
+
+                    <h2>4x / Page</h2>
+
+            <a href="https://binary42420.github.io/HoneyLabel/banana/4x.pdf" class="button">Backup DL Link</a>     
         </div>
-      </div>
+
+
+
+
+
+
       <div class="frame">
-      <div class="box">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/banana/9x.pdf')" ;>
-            <img src="https://binary42420.github.io/HoneyLabel/bread.png" style="max-width:50%;"/>
+      <div class="box"; id="linkBox">
+          <a href="#" class="fill-div" onclick="printPDF('https://binary42420.github.io/HoneyLabel/banana/9x.pdf');">
+            <img src="https://binary42420.github.io/HoneyLabel/bread.png" style="max-width:70%;"/>
           </a>
-          <h2>9x / Page</h2>
+          </div>
+                    <h2>9x / Page</h2>
+
           
             <a href="https://binary42420.github.io/HoneyLabel/banana/9x.pdf" class="button">Backup DL Link</a>
           
-        </div>
         </div>
     <!--  </div>  -->
 
