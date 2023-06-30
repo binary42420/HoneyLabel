@@ -58,7 +58,7 @@
       }
 
       li {
-        float: center;
+        margin: auto 0;
 
 
       }
@@ -110,9 +110,7 @@
     document.body.appendChild(iframe);
 
     iframe.onload = function() {
-      setTimeout(function() {
         iframe.contentWindow.print();
-      }, 1600); // Delay printing for 1 second to ensure PDF is loaded
     };
   }
 </script>
