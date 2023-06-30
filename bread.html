@@ -2,119 +2,143 @@
 <html>
 
 <head>
-    <title>Honey Labels</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma" />
-    <style>
-        h1,
-        h4,
-        h5,
-        h6 {
-            font-family: "Karma", sans-serif;
-            margin: 0 auto;
-        }
+  <title>Honey Labels</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <style>
+    body {
+      font-family: "Helvetica Neue", "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
 
-        .w3-bar-block .w3-bar-item {
-            padding: 2px;
-        }
-
-
-        h2 {
-            font-family: "Helvetica Neue", "Arial", sans-serif;
-            font-weight: 600;
-            font-variant-ligatures: normal;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-            text-align: center;
-            margin: 0 auto;
-        }
-
-        a.button {
-            font-family: "Helvetica Neue", "Arial", sans-serif;
-            font-weight: 600;
-            font-variant-ligatures: normal;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            text-align: center;
+  
+    h1, h3 {
+      font-family: "Karma", sans-serif;
+      text-align: center;
+    }
 
 
-        }
+    h3 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-top: 0;
+    }
 
-        h3 {
-            font-family: "Helvetica Neue", "Arial", sans-serif;
-            font-weight: 600;
-            font-variant-ligatures: normal;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-        }
+    p, h2{
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-align: center;
+    }
 
-        ul {
-            list-style-type: none;
-            margin-bottom: 10px;
-            padding-bottom: 10px;
-            overflow: hidden;
-            background-color: #333;
-        }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
 
-        li {
-            margin: 0 auto;
+    li {
+      float: left;
+    }
 
-        }
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
 
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 12px 30px;
-            text-decoration: none;
-            font-size: 1.4rem;
-            font-weight: 600;
-        }
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
 
-        div.box {
-            border: 4px;
-            border-radius: 12px;
-            padding: 2px;
-            border-style: solid;
-            border-color: DarkGoldenRod;
-            margin: 0 auto;
-            max-width: 30%;
-        }
+    .active {
+      background-color: #04AA6D;
+    }
 
-        div.frame {
-            margin: 0 auto;
-            margin-bottom: 1em;
-            width: 100%;
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 1em;
+    }
 
-        }
+    .frame {
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 12px;
+      padding: 0.5em;
+      margin: 1em;
+      max-width: 800px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
+    .gold {
+      border: 4px solid rgb(189, 138, 6);
+      border-radius: 12px;
+      padding: 1em;
+      margin: 1em;
+      max-width: 600px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
+    .gold img {
+      max-width: 100%;
+  height: auto;
+  padding: 0.5rem;
 
-        li a:hover:not(.active) {
-            background-color: #111;
-        }
+    }
 
-        .active {
-            background-color: #04aa6d;
-        }
-    </style>
+    .button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 1em;
+    }
 
-    <script>
-        function printPDF(url) {
-            var iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.src = url;
-            document.body.appendChild(iframe);
+    .button:hover {
+      background-color: #049a5f;
+    }
 
-            iframe.onload = function () {
-                setTimeout(function () {
-                    iframe.contentWindow.print();
-                }, 1600); // Delay printing for 1 second to ensure PDF is loaded
-            };
-        }
-    </script>
+    @media (max-width: 600px) {
+      .frame, .gold {
+        max-width: 100%;
+        margin: 1em 0;
+      }
+    }
+  </style>
+  <script>
+    function printPDF(url) {
+      var iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = url;
+      document.body.appendChild(iframe);
+
+      iframe.onload = function () {
+          iframe.focus();
+          iframe.contentWindow.print();
+      };
+    }
+  </script>
 </head>
 
 <body>

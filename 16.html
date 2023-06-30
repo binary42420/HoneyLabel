@@ -134,10 +134,8 @@
       document.body.appendChild(iframe);
 
       iframe.onload = function () {
-        setTimeout(function () {
           iframe.focus();
           iframe.contentWindow.print();
-        }, 1000);
       };
     }
   </script>
