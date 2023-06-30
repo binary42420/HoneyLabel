@@ -8,55 +8,30 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
   <style>
-    h1,
-    h4,
-    h5,
-    h6 {
-      font-family: "Karma", sans-serif
+    body {
+      font-family: "Helvetica Neue", "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
     }
 
+    h1, h3 {
+      font-family: "Karma", sans-serif;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-top: 0;
+    }
 
     p {
-      font-family: "Helvetica Neue", "Arial", sans-serif;
-      font-weight: 400;
-      font-variant-ligatures: normal;
       font-size: 1.4rem;
+      font-weight: 400;
       letter-spacing: 1px;
       text-align: center;
-
-    }
-
-    h3,
-    h2 {
-      font-family: "Helvetica Neue", "Arial", sans-serif;
-      font-weight: 800;
-      font-variant-ligatures: normal;
-      font-size: 1.8rem;
-      letter-spacing: 1px;
-      text-align: center;
-    }
-
-    div.frame {
-
-      border: 2px solid rgb(0, 0, 0);
-      border-radius: 12px;
-      padding: 2em;
-      max-width: 80%;
-      width: 80%;
-      max-height: 35%;
-      float: left;
-      padding-left: 2em;
-      padding-top: 2em;
-      padding-bottom: 2em;
-      margin-top: 2em;
-      margin-bottom: 2em;
-      margin-right: 2em;
-      margin-left: 2em;
-      display: flex; /* Add flexbox display */
-  justify-content: space-between; /* Add spacing between divs */
-  align-items: center; 
-
-
     }
 
     ul {
@@ -65,13 +40,10 @@
       padding: 0;
       overflow: hidden;
       background-color: #333;
-
     }
 
     li {
-      margin: auto 0;
-
-
+      float: left;
     }
 
     li a {
@@ -82,42 +54,74 @@
       text-decoration: none;
       font-size: 1.4rem;
       font-weight: 600;
-
     }
-
-
 
     li a:hover:not(.active) {
       background-color: #111;
-    }
-
-    img {
-
-      width: 200px;
-      height: 258px;
-
-      display: block;
-      margin: auto 0;
     }
 
     .active {
       background-color: #04AA6D;
     }
 
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 1em;
+    }
 
-    div.gold {
+    .frame {
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 12px;
+      padding: 0.5em;
+      margin: 1em;
+      max-width: 800px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .gold {
       border: 4px solid rgb(189, 138, 6);
       border-radius: 12px;
-      padding: 2px;
-      margin-top: 4px;
-      margin-right: 4px;
-      padding-left: 2em;
-      padding-top: 2em;
-      padding-bottom: 2em;
-      display: flex; /* Add flexbox display */
-  flex-direction: column; /* Arrange elements vertically */
-  align-items: center;
+      padding: 0.5em;
+      margin: 1em;
+      max-width: 600px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
+    .gold img {
+      max-width: 400px;
+      padding: 0.5em;
+      display: block;
+
+    }
+
+    .button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 1em;
+    }
+
+    .button:hover {
+      background-color: #049a5f;
+    }
+
+    @media (max-width: 600px) {
+      .frame, .gold {
+        max-width: 100%;
+        margin: 1em 0;
+      }
     }
   </style>
   <script>
@@ -128,72 +132,71 @@
       document.body.appendChild(iframe);
 
       iframe.onload = function () {
-        iframe.contentWindow.print();
+        setTimeout(function () {
+          iframe.focus();
+          iframe.contentWindow.print();
+          document.body.removeChild(iframe);
+        }, 1000);
       };
     }
   </script>
 </head>
 
 <body>
-
+  <!-- NAVIGATION BAR -->
   <ul>
-    <li><a href="https://binary42420.github.io/HoneyLabel/index.html">All Labels</a></li>
     <li><a href="https://binary42420.github.io/HoneyLabel/4.html">4oz Circle</a></li>
     <li><a class="active" href="https://binary42420.github.io/HoneyLabel/16.html">16oz Oval</a></li>
     <li><a href="https://binary42420.github.io/HoneyLabel/bread.html">Banana Bread</a></li>
   </ul>
-  <!-- !PAGE CONTENT! -->
-  <div class="frame">
-    <h3>Cinnamon</h3>
-    <div class="gold">
-      <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf');">
-        <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.png" />
-      </a>
-      <a href="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf" class="button">Backup DL Link</a>
-      <h2>Front</h2>
+
+  <!-- PAGE CONTENT -->
+  <div class="container">
+    <div class="frame">
+      <div class="top">
+        <h3>Cinnamon</h3>
+      </div>
+      <div class="gold">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf');">
+          <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.png" />
+        </a>
+        <h2>Front</h2>
+        <a href="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf" class="button">Backup DL Link</a>
+      </div>
+      <div class="gold">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf');">
+          <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.png">
+        </a>
+        <h2>Back</h2>
+        <a href="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf" class="button">Backup DL Link</a>
+      </div>
     </div>
 
-    <div class="gold">
-      <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf');">
-        <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.png">
-      </a>
-      <h2>Back</h2>
-      <a href="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf" class="button">Backup DL Link</a>
-    </div>
-  </div>
-
-
   <div class="frame">
-    <h3>LWGT</h3>
+    <div class="top">
+      <h3>LWGT</h3>
+    </div>
     <div class="gold">
       <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/LWGT/16.pdf')">
-        <img src="https://binary42420.github.io/HoneyLabel/16/LWGT/16.png"  />
+        <img src="https://binary42420.github.io/HoneyLabel/16/LWGT/16.png" />
       </a>
       <h2>Front</h2>
-      
-        <a href="https://binary42420.github.io/HoneyLabel/16/LWGT/16.pdf" class="button">Backup DL Link</a>
-      
+      <a href="https://binary42420.github.io/HoneyLabel/16/LWGT/16.pdf" class="button">Backup DL Link</a>
     </div>
-
-
     <div class="gold">
       <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/LWGT/16back.pdf')">
         <img src="https://binary42420.github.io/HoneyLabel/16/LWGT/16back.png" />
       </a>
       <h2>Back</h2>
-      
-        <a href="https://binary42420.github.io/HoneyLabel/16/LWGT/16back.pdf" class="button">Backup DL Link</a>
-      
+      <a href="https://binary42420.github.io/HoneyLabel/16/LWGT/16back.pdf" class="button">Backup DL Link</a>
     </div>
   </div>
-
-
 
   <div class="frame">
 
         <h3>Orange</h3>
         <div class="gold">
-        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16.pdf')">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16.pdf');">
           <img src="https://binary42420.github.io/HoneyLabel/16/ORANGE/16.png"  />
         </a>
         <h2>Front</h2>
@@ -203,7 +206,7 @@
       </div>
 
       <div class="gold">
-        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.pdf')">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.pdf');">
           <img src="https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.png"  />
         </a>
         <h2>Back</h2>
@@ -221,7 +224,7 @@
 
       <h3>Ginger</h3>
       <div class="gold">
-        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16.pdf')">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16.pdf');">
           <img src="https://binary42420.github.io/HoneyLabel/16/GINGER/16.png" />
         </a>
         <h2>Front</h2>
@@ -230,7 +233,7 @@
         
       </div>
       <div class="gold">
-        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16back.pdf')">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16back.pdf');">
           <img src="https://binary42420.github.io/HoneyLabel/16/GINGER/16back.png"  />
         </a>
         <h2>Back</h2>
@@ -249,7 +252,7 @@
       <h3>Turmeric</h3>
 
       <div class="gold">
-        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.pdf')">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.pdf');">
           <img src="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.png" />
         </a>
         <h2>Front</h2>
@@ -259,7 +262,7 @@
       </div>
 
       <div class="gold">
-        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.pdf')">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.pdf');">
           <img src="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.png" />
         </a>
         <h2>Back</h2>
