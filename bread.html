@@ -99,6 +99,21 @@ width: 100%;
       }
 
     </style>
+
+        <script>
+  function printPDF(url) {
+    var iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = url;
+    document.body.appendChild(iframe);
+
+    iframe.onload = function() {
+      setTimeout(function() {
+        iframe.contentWindow.print();
+      }, 1600); // Delay printing for 1 second to ensure PDF is loaded
+    };
+  }
+</script>
   </head>
 
   <body>
