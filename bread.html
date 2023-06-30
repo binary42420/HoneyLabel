@@ -2,155 +2,160 @@
 <html>
 
 <head>
-  <title>Honey Labels</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
-  <style>
-    body {
-      font-family: "Helvetica Neue", "Arial", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-    }
-
-  
-    h1, h3 {
-      font-family: "Karma", sans-serif;
-      text-align: center;
-    }
+    <title>Honey Labels</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+    <style>
+        body {
+            font-family: "Helvetica Neue", "Arial", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
 
 
-    h3 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      margin-top: 0;
-    }
-
-    p, h2{
-      font-size: 2.4rem;
-      font-weight: 800;
-      letter-spacing: 1px;
-      text-align: center;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: #333;
-    }
-
-    li {
-      float: left;
-    }
-
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 12px 30px;
-      text-decoration: none;
-      font-size: 1.4rem;
-      font-weight: 600;
-    }
-
-    li a:hover:not(.active) {
-      background-color: #111;
-    }
-
-    .active {
-      background-color: #04AA6D;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 1em;
-    }
-
-    .frame {
-      border: 2px solid rgb(0, 0, 0);
-      border-radius: 12px;
-      padding: 2.5em;
-      margin-left: 2em;
-      margin-right: 2em;
-      margin-top: 15px;
-      margin-bottom: 10px;
-      max-width: 40%;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      float: left;
-    }
-
-    .gold {
-      border: 4px solid rgb(189, 138, 6);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-right: 1.5rem;
-      margin-top: 1.5rem;
-      max-width: 600px;
-      height: auto;
-      background-color: #fff;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .gold img {
-      max-width: 100%;
-  height: auto;
-  padding: 0.5rem;
-
-    }
-.gold img:hover{
+        h1,
+        h3 {
+            font-family: "Karma", sans-serif;
+            text-align: center;
+        }
 
 
-    opacity: 50%;
-}
+        h3 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-top: 0;
+        }
+
+        p,
+        h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1em;
+        }
+
+        .frame {
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 12px;
+            padding: 2.5em;
+            margin-left: 2em;
+            margin-right: 2em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            max-width: 40%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            float: left;
+        }
+
+        .gold {
+            border: 4px solid rgb(189, 138, 6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-right: 1.5rem;
+            margin-top: 1.5rem;
+            max-width: 600px;
+            height: auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .gold img {
+            max-width: 100%;
+            height: auto;
+            padding: 0.5rem;
+
+        }
+
+        .gold img:hover {
 
 
-    .button {
-      background-color: #9beda4;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      text-decoration: none;
-      font-size: 1.4rem;
-      font-weight: 600;
-      margin-top: 1em;
-    }
+            opacity: 50%;
+        }
 
-    .button:hover {
-      background-color: #53ea65;
-    }
 
-    @media (max-width: 600px) {
-      .frame, .gold {
-        max-width: 100%;
-        margin: 1em 0;
-      }
-    }
-  </style>
-  <script>
-    function printPDF(url) {
-      var iframe = document.createElement('iframe');
-      iframe.style.display = 'none';
-      iframe.src = url;
-      document.body.appendChild(iframe);
+        .button {
+            background-color: #9beda4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-top: 1em;
+        }
 
-      iframe.onload = function () {
-          iframe.focus();
-          iframe.contentWindow.print();
-      };
-    }
-  </script>
+        .button:hover {
+            background-color: #53ea65;
+        }
+
+        @media (max-width: 600px) {
+
+            .frame,
+            .gold {
+                max-width: 100%;
+                margin: 1em 0;
+            }
+        }
+    </style>
+    <script>
+        function printPDF(url) {
+            var iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.src = url;
+            document.body.appendChild(iframe);
+
+            iframe.onload = function () {
+                iframe.focus();
+                iframe.contentWindow.print();
+            };
+        }
+    </script>
 </head>
 
 <body>
@@ -171,14 +176,14 @@
 
     <!-- !PAGE CONTENT! -->
     <div class="frame">
+        <h2>4x / Page</h2>
 
         <div class="gold">
 
             <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/banana/4x.pdf');">
-                <img src="https://binary42420.github.io/HoneyLabel/bread.png" style="max-width:40%;"/>
+                <img src="https://binary42420.github.io/HoneyLabel/bread.png" style="max-width:40%;" />
             </a>
 
-            <h2>4x / Page</h2>
             <a href="https://binary42420.github.io/HoneyLabel/banana/4x.pdf" class="button">Backup DL Link</a>
 
         </div>
@@ -190,11 +195,12 @@
 
 
     <div class="frame">
+        <h2>9x / Page</h2>
         <div class="gold">
             <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/banana/9x.pdf');">
                 <img src="https://binary42420.github.io/HoneyLabel/bread.png" style="max-width:40%;" />
             </a>
-            <h2>9x / Page</h2>
+
 
 
             <a href="https://binary42420.github.io/HoneyLabel/banana/9x.pdf" class="button">Backup DL Link</a>
@@ -203,7 +209,7 @@
 
     </div>
 
-    
+
     <!-- End page content -->
 
     <script>
