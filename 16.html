@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
   <style>
     h1,
-    h2,
     h4,
     h5,
     h6 {
@@ -26,26 +25,34 @@
       font-variant-ligatures: normal;
       font-size: 1.2rem;
       letter-spacing: 1px;
-
+      text-align: center;
     }
 
     h3 {
       font-family: "Helvetica Neue", "Arial", sans-serif;
-      font-weight: 600;
+      font-weight: 800;
       font-variant-ligatures: normal;
       font-size: 1.8rem;
       letter-spacing: 1px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: "Helvetica Neue", "Arial", sans-serif;
+      font-weight: 800;
+      font-variant-ligatures: normal;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      text-align: center;
     }
 
     div.frame {
 
-      border: 2px solid black;
+      border: 1px solid black;
       border-radius: 12px;
-      padding: 2em;
-      margin-top: 1.5em;
-      margin-bottom: 1.5em;
-      margin-left: 1.5em;
-      margin-right: 1.5em;
+      padding: 1em;
+      margin-top: 2em;
+      margin-right: 2em;
 
     }
 
@@ -85,6 +92,7 @@
 
       max-width: 14rem;
     }
+
     div.w3-half {
       border: 4px solid darkgoldenrod;
       border-radius: 12px;
@@ -122,163 +130,184 @@
     <li><a href="https://binary42420.github.io/HoneyLabel/bread.html">Banana Bread</a></li>
   </ul>
   <!-- !PAGE CONTENT! -->
-  <div class="w3-main w3-content w3-padding" style="max-width: 1200px; margin-top: 15px">
-
-    <div class="frame"> <!-- First Photo Grid-->
-      <div>
-        <h3>Cinnamon</h3>
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.png" width="232" height="300" />
-          </a>
-          <h2>Front</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.png" width="232" height="300" />
-          </a>
-          <h2>Back</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="frame">
-      <!-- First Photo Grid-->
-      <div>
-        <h3>LWGT</h3>
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/LWGT/16.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/LWGT/16.png" width="232" height="300" />
-          </a>
-          <h2>Front</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/LWGT/16.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
-
-
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/LWGT/16back.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/LWGT/16back.png" width="232" height="300" />
-          </a>
-          <h2>Back</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/LWGT/16back.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="frame"> <!-- First Photo Grid-->
-
-
-      <div>
-        <h3>Orange</h3>
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/ORANGE/16.png" width="232" height="300" />
-          </a>
-          <h2>Front</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/ORANGE/16.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
-
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.png" width="232" height="300" />
-          </a>
-          <h2>Back</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
+  <div class="frame">
+    <h3>Cinnamon</h3>
+    <div class="w3-row-padding w3-padding-16">
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.png" width="232" height="300" />
+        </a>
+        <a href="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16.pdf" class="button">Backup DL Link</a>
+        <h2>Front</h2>
       </div>
 
-    </div>
-    <div class="frame"> <!-- First Photo Grid-->
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.png" width="232" height="300" />
+        </a>
+        <h2>Back</h2>
+        <a href="https://binary42420.github.io/HoneyLabel/16/CINNAMON/16back.pdf" class="button">Backup DL Link</a>
 
-      <div>
-        <h3>Ginger</h3>
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/GINGER/16.png" width="232" height="300" />
-          </a>
-          <h2>Front</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/GINGER/16.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16back.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/GINGER/16back.png" width="232" height="300" />
-          </a>
-          <h2>Back</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/GINGER/16back.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
       </div>
     </div>
-    <div class="frame"> <!-- First Photo Grid-->
+  </div>
 
-      <div>
-        <h3>Turmeric</h3>
 
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.png" width="232" height="300" />
-          </a>
-          <h2>Front</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
+  <!-- Flavor Group 2: Front and Back Labels -->
+  <div class="frame">
+    <h3>Flavor Group 2</h3>
+    <div class="w3-row-padding w3-padding-16">
+      <div class="w3-half">
+        <h4>Front Label</h4>
+        <img src="front2.jpg" alt="Front Label" style="width:100%">
+      </div>
+      <div class="w3-half">
 
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.png" width="232" height="300" />
-          </a>
-          <h2>Back</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
+
       </div>
     </div>
-    <div class="frame"> <!-- First Photo Grid-->
+  </div>
 
-      <div>
-        <h3>Wild Flower</h3>
 
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16.png" width="232" height="300" />
-          </a>
 
-          <h2>Front</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16.pdf" class="button">Backup DL Link</a>
-          </p>
-        </div>
 
-        <div class="w3-half">
-          <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16back.pdf')">
-            <img src="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16back.png" width="232" height="300" />
-          </a>
 
-          <h2>Back</h2>
-          <p>
-            <a href="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16back.pdf" class="button">Backup DL
-              Link</a>
-          </p>
-        </div>
+  <div class="frame">
+    <!-- First Photo Grid-->
+    <div>
+      <h3>LWGT</h3>
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/LWGT/16.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/LWGT/16.png" width="232" height="300" />
+        </a>
+        <h2>Front</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/LWGT/16.pdf" class="button">Backup DL Link</a>
+        </p>
+      </div>
+
+
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/LWGT/16back.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/LWGT/16back.png" width="232" height="300" />
+        </a>
+        <h2>Back</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/LWGT/16back.pdf" class="button">Backup DL Link</a>
+        </p>
       </div>
     </div>
+  </div>
+  <div class="frame">
+    <!-- First Photo Grid-->
+
+
+    <div>
+      <h3>Orange</h3>
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/ORANGE/16.png" width="232" height="300" />
+        </a>
+        <h2>Front</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/ORANGE/16.pdf" class="button">Backup DL Link</a>
+        </p>
+      </div>
+
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.png" width="232" height="300" />
+        </a>
+        <h2>Back</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/ORANGE/16back.pdf" class="button">Backup DL Link</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+  <div class="frame">
+    <!-- First Photo Grid-->
+
+    <div>
+      <h3>Ginger</h3>
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/GINGER/16.png" width="232" height="300" />
+        </a>
+        <h2>Front</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/GINGER/16.pdf" class="button">Backup DL Link</a>
+        </p>
+      </div>
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/GINGER/16back.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/GINGER/16back.png" width="232" height="300" />
+        </a>
+        <h2>Back</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/GINGER/16back.pdf" class="button">Backup DL Link</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="frame">
+    <!-- First Photo Grid-->
+
+    <div>
+      <h3>Turmeric</h3>
+
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.png" width="232" height="300" />
+        </a>
+        <h2>Front</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16.pdf" class="button">Backup DL Link</a>
+        </p>
+      </div>
+
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.png" width="232" height="300" />
+        </a>
+        <h2>Back</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/TURMERIC/16back.pdf" class="button">Backup DL Link</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="frame">
+    <!-- First Photo Grid-->
+
+    <div>
+      <h3>Wild Flower</h3>
+
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16.png" width="232" height="300" />
+        </a>
+
+        <h2>Front</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16.pdf" class="button">Backup DL Link</a>
+        </p>
+      </div>
+
+      <div class="w3-half">
+        <a href="#" onclick="printPDF('https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16back.pdf')">
+          <img src="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16back.png" width="232" height="300" />
+        </a>
+
+        <h2>Back</h2>
+        <p>
+          <a href="https://binary42420.github.io/HoneyLabel/16/WILDFLOWER/16back.pdf" class="button">Backup DL
+            Link</a>
+        </p>
+      </div>
+    </div>
+  </div>
   </div>
 
 
@@ -302,7 +331,6 @@
     function w3_close() {
       document.getElementById("mySidebar").style.display = "none";
     }
-
   </script>
 </body>
 
