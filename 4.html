@@ -141,11 +141,15 @@ position: relative;
 
 
 	<script type="module">
-		function printPDF2(url2)
+		function printPDF2(url2){
 const iframe2 = document.createElement("iframe2");
 iframe.style.display = "none";
 iframe.src = url2;
 document.body.appendChild(iframe2);
+	iframe2.onLoad= function(){
+iframe.contentWindow.print();
+	};
+	}
 	</script>
 </head>
 
