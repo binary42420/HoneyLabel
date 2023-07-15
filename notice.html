@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Honey Labels</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <style>
+    body {
+      font-family: "Helvetica Neue", "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+  
+    h1, h3 {
+      font-family: "Karma", sans-serif;
+      text-align: center;
+    }
+
+
+    h3 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-top: 0;
+    }
+
+    p, h2{
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 12px 30px;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111;
+    }
+
+    .active {
+      background-color: #04AA6D;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 1em;
+    }
+
+    .frame {
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 12px;
+      padding: 0.5em;
+      margin: 1em;
+      max-width: 45%;
+      width: 40%;
+      height: auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      float: left;
+    }
+
+    .gold {
+      border: 4px solid rgb(189, 138, 6);
+      border-radius: 12px;
+      padding: 1em;
+      margin: 1em;
+      max-width: 600px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .gold img {
+      opacity: 85%;
+      max-width: 80%;
+  height: auto;
+  padding: 0.5rem;
+  display: inline-block;
+
+    }
+
+    .button {
+      background-color: #9beda4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1.0rem;
+      font-weight: 400;
+      margin-top: 1em;
+      margin-bottom: 1.5em;
+    }
+
+    .button:hover {
+      background-color: #53ea65;
+    }
+
+    .gold img:hover {
+      position: relative;
+      opacity: 100%;
+      transform: scale(1.5);
+      height: auto;
+      overflow: visible;
+    }
+    @media (max-width: 600px) {
+      .frame, .gold {
+        max-width: 100%;
+        margin: 1em 0;
+      }
+    }
+  </style>
+  <script>
+    function printPDF(url) {
+      var iframe = document.createElement('iframe');
+      iframe.style.display = 'none';
+      iframe.src = url;
+      document.body.appendChild(iframe);
+
+      iframe.onload = function () {
+          iframe.focus();
+          iframe.contentWindow.print();
+      };
+    }
+  </script>
+</head>
+
+<body>
+        <!-- !Nav bar!-->
+
+    <!-- NAVIGATION BAR -->
+    <ul>
+      <li><a href="https://labels.binary.lol/4.html">4oz Circle</a></li>
+      <li><a href="https://labels.binary.lol/16.html">16oz Oval</a></li>
+      <li><a class="active" href="https://labels.binary.lol/bread.html">Banana Bread</a></li>
+    </ul>
+    <div class="w3-main w3-content w3-padding" style="max-width:1600px;margin-top:15px;">
+  
+
+    <!-- !Body Start! -->
+
+
+    <div class="container">
+
+        <div class="frame">
+            <div class="gold">
+
+                <a href="#" onclick="printPDF('https://labels.binary.lol/banana/3 day.pdf');">
+                    <img src="https://labels.binary.lol/bread.png" />
+                </a>
+                <h3>3 day notice - for late rent payment to threaten to evict if he doesnt pay</h3>
+                <a href="https://labels.binary.lol/banana/3 day.pdf" class="button">Backup DL Link</a>
+            </div></div>
+            
+            <div class="frame">
+           
+            <div class="gold">
+
+                <a href="#" onclick="printPDF('https://labels.binary.lol/banana/30day.pdf');">
+                    <img src="https://labels.binary.lol/bread.png" style="max-width: 50%" />
+                </a>                    <h2>30 day - just cause notice if you want to evict regardless of whether or not he pays </h2>
+
+                <a href="https://labels.binary.lol/banana/30day.pdf" class="button">Backup DL Link</a>
+            </div>
+        </div>
+        </div>
+
+            <!-- !end body! -->
+
+        <!-- End page content -->
+
+</body>
+
+</html>
